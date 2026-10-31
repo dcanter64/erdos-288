@@ -1,0 +1,178 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[margin=1in]{geometry}
+\usepackage{hyperref}
+\usepackage{enumitem}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+
+\newcommand{\Hp}{H(a,b)}
+
+\title{Partial progress on Erd\H{o}s Problem \#288: audits of the two 2026 notes, two closed regimes of the singleton case, and a certified census to $b \le 20{,}000$}
+\author{Meta Muse\\ prompted by Dennis Canter}
+\date{}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This paper reports partial progress on Erd\H{o}s Problem \#288 and nothing more. The problem, which asks whether there are only finitely many pairs of intervals whose reciprocal sums add to an integer, remains open, and no proof of finiteness in general is claimed here. Before this work, the problem was open even in the singleton case, and the only attacks in print were two unreviewed notes from 2026: Nayak's note, which settles the intersecting case and gives a necessary condition package for the disjoint case, and Zeraoulia's note, which reduces the singleton case to a smooth numbers target. We record what one verification campaign has certified. Both notes are audited: Nayak's intersecting case theorem is certified, with wording defects located and listed; Zeraoulia's sieve lemmas are certified item by item, two of them with located defects detailed in Section 2.2, but his global target lemma, Theorem 13 of that note, is valid yet vacuous as quantified, and the campaign's repaired forms of its hypothesis were then refuted outright by an explicit infinite family of non-solutions. On the positive side, the singleton case is closed in two regimes: for intervals starting in the top half, $a > b/2$, the equation has exactly the solutions $(1,1,1)$, $(2,2,2)$, $(2,3,6)$, certified by two independent proofs; and for each fixed interval length $R$ there are only finitely many solutions (certified with qualifications), with the classification complete for $R \le 100$. The published censuses are reproduced exactly and extended under certification to $b \le 20{,}000$ in both branches, over $200{,}010{,}000$ intervals, with no new solutions. At upper length $L = 2$ the frontier is sharpened (a closed justification gap, a new lower bound on the cofactor product, the quadratic reformulation shown equivalent with no contradiction of the forms examined) and the residual is stated exactly; the case is not closed. The residual for the whole problem, including the configuration named by Tao, is stated in the final section.
+\end{abstract}
+
+\section{Introduction}
+
+\subsection{The problem}
+
+Erd\H{o}s Problem \#288 asks the following question, in the form recorded on the problem page \cite{bloom288} and in the original source \cite{ErGr80}.
+
+\begin{quote}
+Is it true that there are only finitely many pairs of intervals $I_1, I_2$ such that
+\[
+\sum_{n_1 \in I_1} \frac{1}{n_1} + \sum_{n_2 \in I_2} \frac{1}{n_2} \in \mathbb{N}?
+\]
+\end{quote}
+
+Throughout, $H(I)$ is the sum of reciprocals over an interval $I$, and for an interval $[a,b]$ we write $\Hp = A/B$ in lowest terms and $R = b - a + 1$. The case $|I_2| = 1$ is called the singleton case: with $I_1 = [a,b]$ and $I_2 = \{m\}$ it asks for the solutions of
+\[
+\Hp + \frac{1}{m} \in \mathbb{Z}. \tag{1}
+\]
+The problem remains open. It was open even in the singleton case before the work reported here, and Erd\H{o}s and Graham already recorded that they could not show even that (1) has finitely many solutions. The purpose of this paper is to consolidate, in conventional form, the partial results certified by the campaign recorded in \texttt{CYCLE1.md}, and to state the residual exactly. Where a proof is long, we summarise it faithfully and point to the repository file containing the full argument and its independent verification. Where the certified files give only a statement and a pointer, we state the theorem with its certification label and give the pointer, and we do not invent intermediate steps.
+
+Three conventions govern the whole paper. First, every result carries the certification label of the campaign files: certified; certified with qualifications or with located defects; supported as stated; refuted; not certified. Second, computation is labelled as computation and is never presented as a proof in kind. Third, statements about the two audited notes distinguish what those notes claim from what this campaign has certified about them.
+
+\subsection{Classical background and the two notes}
+
+No interval other than $\{1\}$ has an integer reciprocal sum (Theisinger 1915, K\"ursch\'ak 1918, for two or more terms), so apart from the pair $(\{1\}, \{1\})$, any integer sum of the form above genuinely needs both intervals. The strongest adjacent published result concerns one interval approaching $1$ and does not address a second interval.
+
+Two unreviewed notes from 2026 are the inputs to everything here.
+
+Nayak's note \cite{nayak} (May 2026, written with assistance from GPT-5.5 Thinking, announced on the problem's forum thread) has two parts. Its Theorem 3.2 settles the intersecting case completely: if two intervals intersect and the sum of their reciprocal sums is an integer, then, up to swapping, the pair is one of $([1,1],[1,1])$, $([1,2],[1,2])$, $([1,2],[2,2])$, $([2,2],[2,2])$. Its Sections 4 to 18 treat the disjoint case and give a necessary condition package. That package was scanned by this campaign, not certified line by line: its Theorem 4.2 (with intervals $[a,b]$ and $[c,d]$, $b < c$, every upper denominator divides $\Lambda_b = \mathrm{lcm}(1, \dots, b)$) is supported as stated, at scan level and instance verified; its clause that the upper length is $o(b)$ along any infinite family is true with a justification gap; and its forced form at fixed upper length $L = 2$ (its Theorem 14.2, restated in Section 5 below) is true with a justification gap, one step of which this campaign later filled (item D0 in Section 5). The note expressly does not claim the disjoint case, and its author asked on the forum whether the $L = 2$ obstruction can be pushed further.
+
+Zeraoulia's note \cite{zeraoulia} (February 2026) treats the singleton case (1). Its Lemma 1 forces $m = B$, the reduced denominator of $\Hp$, so there is at most one candidate $m$ per interval. Its Lemma 2 is a $p$-adic sieve: for an odd prime $p$ with $p^2 > b$, writing $T_p$ for the reciprocal sum over the cofactors of the multiples of $p$ in $[a,b]$, either $T_p \not\equiv 0 \pmod p$, in which case $v_p(m) = 1$ and $m$ satisfies an explicit congruence modulo $p^2$ (the prime is called good), or $T_p \equiv 0 \pmod p$, in which case $p \nmid m$ (the prime is called bad). Combining the good primes by the Chinese remainder theorem forces any solution's $m$ into a single residue class $r(a,b)$ modulo $Q(a,b)$, the product of $p^2$ over the good primes; this class is called the forced class. Since $m \mid \mathrm{lcm}(a, \dots, b)$, the candidate $m$ is $b$-smooth. His Theorem 13 then states that if, for all large $b$, the forced class contains no $b$-smooth integer up to the interval lcm, finiteness follows. His computations verified (1) exhaustively for $b \le 1600$, finding exactly six solutions.
+
+A comment by Terence Tao on the problem thread (February 2026) records a literature search finding no published result of this form, observes that both intervals in a solution must have length $o(N)$ where $N$ is the largest element, and names the expected hard case: a dyadic type interval $I_1 = [\alpha M, M]$ together with a very short interval $I_2 = [N-h, N]$ with $N$ much larger than $M$. We treat that comment as orientation, not as a result.
+
+\subsection{What this campaign did}
+
+One cycle was run, designed in advance with success criteria fixed in three tiers (\texttt{CYCLE1\_DESIGN.md}). Wave 0 audited both notes and reproduced both censuses with two independent implementations each. Wave 1 extended the censuses and attacked the two frontiers the notes name: the disjoint case at $L = 2$, and Zeraoulia's target hypothesis in restricted regimes. Every claim below is taken from a verifier certified file; the files are in this repository, and \texttt{CYCLE1.md} is the consolidated record.
+
+\section{The audits}
+
+\subsection{Nayak's intersecting case: certified, with located defects}
+
+\begin{theorem}[Nayak, Theorem 3.2, certified with located defects]
+If two intervals $I, J$ intersect and $H(I) + H(J)$ is an integer, then, up to swapping, the pair is one of $([1,1],[1,1])$, $([1,2],[1,2])$, $([1,2],[2,2])$, $([2,2],[2,2])$, and all four pairs do have an integer sum.
+\end{theorem}
+
+The audit (\texttt{AUDIT-A.md}) certifies the theorem and its Lemma 3.1: the theorem is true and the note's argument proves it. The classification was confirmed independently by exact computation to endpoints $60$ by the verifier and to $1000$ by the red team, and the note's own Appendix A verification script, rerun verbatim at bound $2000$, reproduced its printed output exactly. The located defects are wording and exposition only. The most visible: the proof's final sentence attributes all four pairs to the length $2$ subcase inside $\{1,2\}$, which yields only two of them; the other two come from the preceding length $1$ case. A second candidate defect is an inconsistency in the definition of $z_b$ (stated with a maximum in the note's Section 12, without it in Section 13, and with the maximum form in its Theorem 17.1(7)); it is vacuous for fixed $L$. The whole note scan logged seven items, all justification or wording gaps in statements found true. Whether any of these is the one minor issue that an unnamed standard check reportedly flagged on the forum is unresolved: the forum reply records only that a check claimed one minor issue, and nothing anywhere records what it flagged.
+
+The disjoint case sections of the note were scanned, not certified line by line. One gap found by the scan, the missing justification in the note's Theorem 13.3, was later supplied in full by this campaign (Section 5). The note's summary statement, its Theorem 17.1, is restated clause by clause in \texttt{GAPS.md} with honest labels: no clause is verifier certified, the strongest label is supported as stated, and the package excludes nothing by itself.
+
+\subsection{Zeraoulia's reduction: lemmas certified, target vacuous}
+
+The audit (\texttt{AUDIT-B.md}) certifies the sieve chain item by item: Lemma 1 (denominator forcing), Lemma 2 (case (a) certified with a proof display defect; case (b) certified), Lemma 5 and Corollary 6 (the characterisation of the bad prime event, and that for fixed cofactor data only finitely many primes are bad), Propositions 8 and 10 (good prime ranges and the size of $Q(a,b)$; Proposition 10 certified with a defect, its theta bound being false at $b = 2$ and $b = 3$ only), the CRT reduction, and Remark 14. Two smaller items are confirmed: the note prints $H(3,6) = 49/20$ where the correct value is $19/20$, a non propagating misprint, and its Remark 4 asymptotic should tend to $\log 2$.
+
+\begin{theorem}[Status of Zeraoulia's Theorem 13]
+The implication stated as Theorem 13 of \cite{zeraoulia} is logically valid, but its hypothesis is unsatisfiable as quantified. Theorem 13 is therefore valid but vacuous, and is not certified as a usable target.
+\end{theorem}
+
+The reason is a quantifier defect, not a gap in the sieve. The hypothesis demands that for every $1 \le a \le b$ with $b$ large, the forced class contain no $b$-smooth member at most the interval lcm. But at a singleton interval $(a,b) = (q^2, q^2)$ the sieve is empty, the modulus is $Q = 1$, the forced class is everything, and $m = q^2$ is a $b$-smooth member of it at every scale. So the hypothesis fails on trivial intervals alone, regardless of the behaviour on intervals where the sieve has content. The campaign's repairs (\texttt{TARGET.md}) restrict the hypothesis to intervals where the sieve is nonempty: repair 13R uses the hypothesis (H-sieve) that no $b$-smooth $m \le \mathrm{lcm}(a,\dots,b)$ lies in the forced class on such intervals, and repair 13R+ adds a hypothesis (H-blind) covering the sieve empty regime. Section 3.3 shows that (H-sieve) is false anyway, by a family inside the regime where the sieve is as rich as it can be. The repairs therefore share the status of the original: logically valid implications with unsatisfiable hypotheses. This is a defect in the note's packaging of its own reduction; the sieve machinery itself (Lemmas 1 and 2 and the CRT reduction) is certified and is used below.
+
+\section{The singleton case: two closed regimes, and a refuted route}
+
+Everything in this section is from \texttt{CLUSTER-E.md}, the verifier's certification record. The black boxes used are the certified Lemma 1, Lemma 2, CRT reduction, and census of Section 4; everything else was checked line by line.
+
+\subsection{Regime (ii): intervals starting in the top half}
+
+\begin{theorem}[Certified]
+If $a > b/2$ (strict), the singleton equation (1) has exactly the solutions $(a,b,m) = (1,1,1)$, $(2,2,2)$, $(2,3,6)$.
+\end{theorem}
+
+Two independent prover routes reached the classification and both are certified; a dedicated red team failed to break either, including by an exhaustive search of the regime to $b = 5000$. We summarise both proofs.
+
+First route. For $b \le 33$ the certified census applies directly, and filtering its six solutions by $2a > b$ leaves exactly the three. Let $b \ge 34$. If $3a \ge 2b + 2$ then, writing $b = a + R - 1$, one has $a \ge 2R$ and $H(a,b) < 1/2$ (for $R \ge 2$ the terms after the first are strictly below $1/a$, so $H < R/a \le 1/2$; for $R = 1$, $H = 1/a \le 1/34$). Then $H + 1/m$ lies in $(1, 3/2)$ for $m = 1$ and in $(0,1)$ for $m \ge 2$, and is never an integer. The remaining strip is $3a \le 2b + 1$. There, an integral comparison gives $H \le 1/a + \log(b/a) \le 1/a + \log(2 - 1/a)$; with $\log 2 < 111/160$ (verified from its series derivation, in exact rational arithmetic) and $a \ge 18$ in the strip, $H < 1/18 + 111/160 = 1079/1440 < 3/4$. From $0 < H < 3/4$ alone, a solution forces $m \in \{2, 3\}$: $m = 1$ puts the sum in $(1, 7/4)$, and $m \ge 2$ puts it below $5/4$, hence equal to $1$ with $1/m \in (1/4, 1)$. Now Bertrand's postulate applied to $\lfloor b/4 \rfloor$ supplies a prime $\ell$ with $b/4 < \ell < b/2$; every such prime satisfies $\ell \ge 11$ and $\ell^2 > b$, its only possible multiples in $[a,b]$ are $2\ell$ and $3\ell$, at least one of them lies in $[a,b]$, and the corresponding values of $T_\ell$ are $1/2$, $1/3$, or $5/6$, each nonzero in $\mathbb{F}_\ell$. So $\ell$ is a good prime, and by Lemma 2, case (a), a solution forces $v_\ell(m) = 1$, in particular $\ell \mid m$. With $\ell \ge 11$ and $m \in \{2,3\}$ this is impossible.
+
+Second route. For $b < 32$ the classification is by enumeration, agreeing with the certified census. For $R = 1$, $(A+1)/B = 2/a$ is an integer only for $a \mid 2$. The key lemma is a size chain: for $R \ge 2$,
+\[
+\frac{A+1}{B} = H + \frac{1}{B} < \frac{2R}{a},
+\]
+because $H < R/a$ (the first term is $1/a$, the rest strictly smaller) and $B = A/H > a/R$ since $A \ge 1$, giving $1/B < R/a$. A solution makes $(A+1)/B$ a positive integer, hence at least $1$, so every solution with $R \ge 2$ has $a < 2R$. In the remaining window, $a \le 2R$, a $2$-adic argument applies: with $2^t \le b < 2^{t+1}$, the maximum of $v_2$ on $[a,b]$ is attained exactly once and is at least $t - 1$, so $v_2(H) = -s$ for that maximum $s$, giving $v_2(B) = s$ and $B \ge 2^{t-1} \ge 16$. An integral bound, evaluated by an exact upper Riemann sum, gives $H \le 319/420 + 1/a$ in the window, and with $a \ge 17$ a solution would give the positive integer $(A+1)/B \le 319/420 + 1/17 + 1/16 = 25157/28560 < 1$, a contradiction.
+
+\subsection{Regime (i): fixed length}
+
+\begin{theorem}[Certified with qualifications]
+Fix $R \ge 1$. The singleton equation (1) with $b - a + 1 = R$ has only finitely many solutions. Precisely: for $R = 1$ the solutions are exactly $a \in \{1, 2\}$; for $R \ge 2$ every solution satisfies $a \le 2R$ (in fact $a < 2R$), hence $b \le 3R - 1$, and all solutions for that $R$ are found by the explicit finite check over $1 \le a \le 2R$. The classification is complete for $R \le 100$: the solutions are $(1,1,1)$, $(2,2,2)$ at $R = 1$; $(1,2,2)$, $(2,3,6)$ at $R = 2$; $(1,3,6)$ at $R = 3$; $(3,6,20)$ at $R = 4$; and none for $5 \le R \le 100$.
+\end{theorem}
+
+The proof is the size chain of the second route above (and an equivalent argument by the first prover): for $R \ge 2$ a solution has $a < 2R$, and for $R = 1$, $(A+1)/B = 2/a$ is integral only for $a \in \{1,2\}$. The qualifications, which are part of the certified statement, are: the statement is per fixed $R$, not uniform in $R$; the classification is certified for $R \le 100$ only, because the residual check for that $R$ then lies inside the certified census ($b \le 3R - 1 \le 299$); and for $R > 100$ the finite check is specified but has not been run, and no solution list for $R > 100$ is certified.
+
+\subsection{The class route is refuted}
+
+The closures above succeed by arguments that use input outside the forced class: the size of the numerator $A + 1$ against $B$, the prime $2$, and one specific good odd prime together with a bound on $m$. That this extra input is necessary is itself a certified result.
+
+\begin{theorem}[Theorem F, certified with qualifications]
+For each prime $P \equiv 1 \pmod 4$, let $n_P \in [1, (P-1)/2]$ satisfy $n_P^2 \equiv -1 \pmod P$, and let $(a, b) = (n_P^2, n_P^2 + 1)$. Then the set of good primes is exactly $\{P\}$; $B = a(a+1) = \mathrm{lcm}(a, b)$, so $B$ is $b$-smooth and at most the interval lcm; $B$ lies in the forced class; $v_p(B) = 1$ at every good prime and there are no bad primes; and $(A+1)/B = 2/a$, which is not an integer, so $(a,b)$ is not a solution. The intervals obtained are infinitely many and distinct.
+\end{theorem}
+
+Consequently the hypothesis (H-sieve) of \texttt{TARGET.md} fails for every threshold, and so does its single candidate weakening (that it would suffice for $B$ itself to lie outside the class): both fail at these intervals, whose denominators are $b$-smooth members of the forced class satisfying every structural condition the class route can see (membership, smoothness, the size bound, and the good and bad prime valuation profile). Hence no argument whose only input is the forced class and those structural properties can exclude these intervals, in either regime of this section. The repair 13R+ is therefore vacuous as a route to finiteness for the same reason as the original Theorem 13, now with a mathematical rather than a quantifier obstruction. The hypothesis (H-blind) is untouched by the family (its intervals have a nonempty good prime set) and remains open as a statement; it is moot as a component of 13R+, whose other conjunct is false. The one qualification: the supporting characterisation lemma (Lemma 1.1 of the second prover) is certified in its corrected odd prime form; as printed, without the word odd, it is false at exactly $a = 1$ and $a = 2$, and the family here has $a \ge 4$ and is unaffected.
+
+\section{Computation: the censuses}
+
+All computation is exact integer or exact rational arithmetic; the record is \texttt{CENSUS0.md} and \texttt{CENSUS1.md}, and \texttt{REPRODUCE.md} gives the commands.
+
+Reproduction (Wave 0). Two independent implementations, one by exact rational prefix differences and one by prime by prime $p$-adic tracking, reproduced both published tables and are certified in agreement. The singleton census to $b \le 1600$ has exactly the six solutions $(1,1,1)$, $(1,2,2)$, $(2,2,2)$, $(1,3,6)$, $(2,3,6)$, $(3,6,20)$. To $b \le 2000$ the disjoint singletons are exactly the three of those with $m > b$, and the disjoint branch at upper length $L = 2$ is empty. Four denominator near miss intervals for $L = 2$ were recorded exactly: $(4,7)$, $(5,7)$, $(9,12)$, $(154,156)$, each with reduced denominator $c(c+1)$ for the forced candidate and a nonzero numerator residue, so each fails the numerator congruence and nothing else.
+
+Extension (Wave 1). Two new implementations sharing no decision code, a scaled prime by prime engine and a from scratch multi modular bignum engine whose filter soundness the verifier rederived line by line, each examined all $200{,}010{,}000$ intervals with $b \le 20{,}000$ and agree exactly: no new singleton solution in $(2000, 20000]$, the $L = 2$ branch empty throughout, the near miss list unchanged, and no interval above $b = 2000$ even meeting the $L = 2$ denominator condition. A verifier spot census by a third method reproduced both outputs on $7{,}000{,}650$ intervals, including the full band $2000 < b \le 3000$. The benchmark gate at $b = 5000$ required by the design passed easily.
+
+The stretch to $b \le 100{,}000$ was not run. \texttt{CENSUS1.md}, Section 5 records the projections (one engine at $44$ to $76$ minutes of compute but with prefix inverse tables growing from about $42$ MB to about $909$ MB and a kernel compiled at a maximum of $20{,}000$, needing a memory adaptation and a rebuild; the other at $51$ hours at best and $105$ to $255$ hours on its other models) and the grounds for the decision: the certified $20{,}000$ result already satisfied the design's tenfold extension criterion with a two implementation agreement certificate. No result at $100{,}000$ is claimed.
+
+\section{The $L = 2$ frontier: sharpened, not closed}
+
+This section is from \texttt{CLUSTER-D.md}. The setting is Nayak's forced form, which this campaign uses at its audited status: its smoothness step is proved in full by item D0 below, and its sole remaining dependence is the note's Theorem 4.2 at scan supported status. In that form: for all sufficiently large $b$, a disjoint solution at upper length $L = 2$, with upper interval $[c, c+1]$, must satisfy $c = P_0 u_0$, $c + 1 = P_1 u_1$, $P_1 u_1 - P_0 u_0 = 1$, where the prime sets $S_0, S_1$ partition $\{p : z_b < p \le b\}$, $P_i$ is the product over $S_i$, $\log P_0 = \log P_1 = b/2 + o(b)$, the cofactors $u_i$ are $z_b$-smooth, and the reduced denominator of the lower interval sum is $c(c+1)$.
+
+Four results are certified. (D0) The missing justification in Nayak's Theorem 13.3, that every prime factor of the cofactors $u_j$ is at most $z_b$, is supplied in full, clearing that repair debt under the whole fixed length package. (D1, certified with qualifications) A new constraint: $\log(u_0 u_1) \ge (2 - o(1))\sqrt{b}$. This is the first lower bound on the cofactor product itself; the note's Theorem 14.4 bounds a different, larger quantity and implies nothing here. (D2) The mechanism behind D1 is saturated: maximal prime powers contribute at most $(2 + o(1))\sqrt{b}$ to $\log(u_0 u_1)$ in total, so any further size in the cofactor product must come from first power primes in $(\sqrt{b}, z_b]$ dividing $c$ or $c+1$, a band that nothing currently forces. (D3) The ratios are rigid: $|P_0/P_1 - u_1/u_0| = 1/(P_1 u_0)$ exactly, and each of $u_1/u_0$, $u_0/u_1$ is a strictly best approximation, hence a convergent, of the other ratio. No impossibility of smooth convergents at this scale is proved or claimed.
+
+The quadratic route suggested on the forum is, as a reformulation, exactly equivalent to the original equation. The compression $Y^2 = 1 + 4PW$, with $P = P_0 P_1$ and $W = u_0 u_1$, satisfies $Y = 2c + 1$, and the identity is in explicit bijection with the consecutiveness equation $P_1 u_1 - P_0 u_0 = 1$; its splitting is that bijection's inverse, is idempotent, preserves every size measure, and no contradiction of the forms examined (moduli dividing $P$ or $W$, small moduli, Legendre and reciprocity signs, sign pattern counting, quadratic form arguments) exists. What is certified is the equivalence itself, that the splitting is not a descent, and the absence of contradictions of those enumerated forms; an argument in this language that brought in additional structural input is not precluded by anything certified here.
+
+The red team's constructive search ran $165{,}522{,}272$ directed forced form candidates in two instantiations. Exactly one passed the smoothness stage (at $b = 30$: $P_0 = 6409$, $P_1 = 437$, $u_0 = 3$, $u_1 = 44$, $c = 19227$), and it fails the exact interval test for every $a$. The least smoothness defect among size survivors grows over the tested range ($20.42$, $25.91$, $33.22$ at $b = 100, 120, 150$). No claim is made beyond $b = 225$ for this search.
+
+The residual $R_D$ (\texttt{CLUSTER-D.md}, Section 3) is the conjunction of the forced form, the prime square constraints of D1, the ceiling of D2, the approximation constraint of D3, the equivalence of the quadratic reformulation and the absence of contradictions of the examined forms, and the computational map above. A closure would need one of three named extra inputs, none a consequence of anything certified: (E1) the mirror residues of the note's Theorem 13.5 and the mod $p^2$ congruences of its Theorems 14.3 and 14.4, brought to bear with their values, which are exactly the lower interval data the quadratic identity discards; (E2) the lower interval numerator congruence $A + 2c + 1 \equiv 0 \pmod{c(c+1)}$, brought to bear asymptotically (all four census near misses satisfy every denominator condition and fail exactly this congruence); (E3) an effective $S$-unit smoothness obstruction uniform in growing support, equivalently control of the first power primes in $(\sqrt{b}, z_b]$ inside $c$ and $c+1$. Cluster D does not close the $L = 2$ case.
+
+\section{What remains open}
+
+Erd\H{o}s \#288 remains open: finiteness is unproved in general. The precise residual after Cycle 1 is as follows; \texttt{GAPS.md} states the full map (gap list G1 to G7 and a Cycle 2 specification, items C2-2 to C2-7, item C2-1 being complete).
+
+\begin{itemize}[leftmargin=1.5em]
+\item The singleton case outside the closed regimes: $a \le b/2$ with the length $R$ growing with $b$, and any statement uniform in $R$. The forced class route to this case is refuted (Section 3.3), so a proof needs a mechanism outside it.
+\item The hypothesis (H-blind) as a global statement: open, and moot as a component of the repair 13R+.
+\item The $L = 2$ case, at the residual $R_D$ with named inputs E1 to E3.
+\item Every fixed upper length $L \ge 3$, where the CRT smoothness package is necessary but not excluding, and the growing $L$ regime, where the package itself is not yet stated uniformly.
+\item Tao's configuration: a dyadic lower interval at scale $M$ with a very short upper interval at a possibly exponentially larger scale $N$. Cycle 1 scoped this configuration and did not attack it.
+\item The census frontier is certified to $b \le 20{,}000$; the stretch to $100{,}000$ is documented and unrun.
+\end{itemize}
+
+\section{Verification and reproducibility}
+
+The campaign's discipline was that only verifier certified files are the record. Verifiers worked from statements and independently recomputed every finite claim before reading the provers' drafts; load bearing results carried a red team tasked only with refutation; defects were logged in the file where they were found, including defects in the campaign's own repaired statements (Section 3.3) and two verifier side errors that were caught and rerun clean. The coordinator's record \texttt{CYCLE1.md} was assembled exclusively from the certified cluster files and grades the cycle against the criteria fixed in advance: the prize tier (the singleton case closed in a named regime) and the expected tier were met in full; the $L = 2$ branch of the prize was not met.
+
+\texttt{REPRODUCE.md} gives exact commands and expected outputs for rerunning the censuses and the cluster check scripts, in increasing cost order. All arithmetic is exact. The process, the AI disclosure, the measured token ledger with its accounting basis, and the defect log are in \texttt{PROCESS\_AND\_DISCLOSURE.md} and \texttt{TOKENS1.md}. No human mathematician has refereed these results, and no Lean formalisation exists.
+
+\begin{thebibliography}{9}
+
+\bibitem{ErGr80} P. Erd\H{o}s and R. L. Graham, \emph{Old and new problems and results in combinatorial number theory}, Monographies de L'Enseignement Math\'ematique 28, Universit\'e de Gen\`eve, 1980, p. 34.
+
+\bibitem{bloom288} T. F. Bloom, Erd\H{o}s Problem \#288, \url{https://www.erdosproblems.com/288}, accessed 2026-10-30.
+
+\bibitem{nayak} R. Nayak, \emph{A Research Note on Harmonic Sums over Two Integer Intervals: Intersecting intervals and reductions in the disjoint case}, May 2026. Written with assistance from GPT-5.5 Thinking. Announced on the forum thread for Problem \#288 at erdosproblems.com, 3 May 2026. Unreviewed.
+
+\bibitem{zeraoulia} R. Zeraoulia, \emph{The singleton case of Erd\H{o}s Problem 288: A CRT reduction and a smooth-number obstruction}, February 2026. ResearchGate preprint, DOI 10.13140/RG.2.2.10862.47684/1. Unreviewed.
+
+\end{thebibliography}
+
+\end{document}
