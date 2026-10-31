@@ -1,0 +1,242 @@
+{
+ "checks": [
+  {
+   "name": "D1-PartC K counts match prover1_results.json",
+   "pass": true,
+   "detail": "[{'b': 10000, 'T_b': 2, 'K': 6, 'bound_over_sqrtb': 0.5280955025337769, 'finiteT_pred': 0.5857864376269051}, {'b': 100000, 'T_b': 2, 'K': 17, 'bound_over_sqrtb': 0.6002971905012535, 'finiteT_pred': 0.5857864376269051}, {'b': 1000000, 'T_b': 3, 'K': 62, 'bound_over_sqrtb': 0.8248392528265405, 'finiteT_pred': 0.8452994616207483}, {'b': 10000000, 'T_b': 4, 'K': 197, 'bound_over_sqrtb': 0.9646292557703166, 'finiteT_pred': 1.0}, {'b': 100000000, 'T_b': 4, 'K': 560, 'bound_over_sqrtb': 0.9968592054900247, 'finiteT_pred': 1.0}, {'b': 10000000000, 'T_b': 5, 'K': 4944, 'bound_over_sqrtb': 1.1034971777737526, 'finiteT_pred': 1.1055728090000843}, {'b': 1000000000000, 'T_b': 6, 'K': 44025, 'bound_over_sqrtb': 1.18236341308078, 'finiteT_pred': 1.1835034190722737}]"
+  },
+  {
+   "name": "D1-PartC ratios match prover1 table to 3dp",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "D1-PartC ratios track finite-T prediction 2(1-1/sqrt(T)) within 0.06",
+   "pass": true,
+   "detail": "[(10000, 0.528, 0.586), (100000, 0.6, 0.586), (1000000, 0.825, 0.845), (10000000, 0.965, 1.0), (100000000, 0.997, 1.0), (10000000000, 1.103, 1.106), (1000000000000, 1.182, 1.184)]"
+  },
+  {
+   "name": "near-miss table matches CENSUS0 exactly",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "D-SQ scope: Q_T empty for all four near-miss b (T_b in {0,0,0,1})",
+   "pass": true,
+   "detail": "[(7, 0), (7, 0), (12, 0), (156, 1)]"
+  },
+  {
+   "name": "D-SQ scope: a < b/2 hypothesis fails for all four near-misses (they are not solutions)",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "D-SQ Step1: for 3000<=b<=20000 step 97, a=b//3, all p in Q_T: S_p nonempty, 0<U<p, p not | U V",
+   "pass": true,
+   "detail": "tested=1129 bad=0"
+  },
+  {
+   "name": "D0 finite form: every n|Lambda_b, n<=3000, b in {60,120}: cofactor after removing (zb,b] primes is zb-smooth",
+   "pass": true,
+   "detail": "divisors tested=2591 bad=0"
+  },
+  {
+   "name": "Q1/Q2/D3: identity, splitting recovery, idempotence, D3 equality on random consecutive data",
+   "pass": true,
+   "detail": "tests=600 ok=600"
+  },
+  {
+   "name": "Q2 leak example P=15,W=40,Y=49: A=24,B=25,P'=3,P''=5,W'=8,W''=5, gcd(W'',P'')=5 (cleanliness fails)",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "Q3 near-miss (5,7): (W/5)=+1, (W/7)=-1 (both signs in one example)",
+   "pass": true,
+   "detail": "{'7': -1, '5': 1}"
+  },
+  {
+   "name": "Q3 own synthetics: (W/p) takes both signs, never 0",
+   "pass": true,
+   "detail": "{-1: 68, 0: 0, 1: 53}"
+  },
+  {
+   "name": "Q3 own synthetics: (P/q) takes both signs on small prime divisors of W",
+   "pass": true,
+   "detail": "{-1: 4, 0: 0, 1: 7}"
+  },
+  {
+   "name": "prover2 Legendre total consistent: 68+53=121 = sum of synthetic prime counts 10+17+34+60",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "three disjoint singleton solutions verify exactly (scope reference only)",
+   "pass": true,
+   "detail": "[True, True, True]"
+  },
+  {
+   "name": "singleton b values give T_b = floor(ln b /4) = 0: D-SQ range undefined there (no L=1 claim possible)",
+   "pass": true,
+   "detail": ""
+  }
+ ],
+ "partC": [
+  {
+   "b": 10000,
+   "T_b": 2,
+   "K": 6,
+   "bound_over_sqrtb": 0.5280955025337769,
+   "finiteT_pred": 0.5857864376269051
+  },
+  {
+   "b": 100000,
+   "T_b": 2,
+   "K": 17,
+   "bound_over_sqrtb": 0.6002971905012535,
+   "finiteT_pred": 0.5857864376269051
+  },
+  {
+   "b": 1000000,
+   "T_b": 3,
+   "K": 62,
+   "bound_over_sqrtb": 0.8248392528265405,
+   "finiteT_pred": 0.8452994616207483
+  },
+  {
+   "b": 10000000,
+   "T_b": 4,
+   "K": 197,
+   "bound_over_sqrtb": 0.9646292557703166,
+   "finiteT_pred": 1.0
+  },
+  {
+   "b": 100000000,
+   "T_b": 4,
+   "K": 560,
+   "bound_over_sqrtb": 0.9968592054900247,
+   "finiteT_pred": 1.0
+  },
+  {
+   "b": 10000000000,
+   "T_b": 5,
+   "K": 4944,
+   "bound_over_sqrtb": 1.1034971777737526,
+   "finiteT_pred": 1.1055728090000843
+  },
+  {
+   "b": 1000000000000,
+   "T_b": 6,
+   "K": 44025,
+   "bound_over_sqrtb": 1.18236341308078,
+   "finiteT_pred": 1.1835034190722737
+  }
+ ],
+ "near_misses": [
+  {
+   "a": 4,
+   "b": 7,
+   "A": 319,
+   "B": 420,
+   "c": 20,
+   "residue": 360,
+   "sum": "6/7",
+   "T_b": 0,
+   "Q_T": [],
+   "a_lt_b_over_2": false,
+   "fac_c": {
+    "2": 2,
+    "5": 1
+   },
+   "fac_c1": {
+    "3": 1,
+    "7": 1
+   }
+  },
+  {
+   "a": 5,
+   "b": 7,
+   "A": 107,
+   "B": 210,
+   "c": 14,
+   "residue": 136,
+   "sum": "68/105",
+   "T_b": 0,
+   "Q_T": [],
+   "a_lt_b_over_2": false,
+   "fac_c": {
+    "2": 1,
+    "7": 1
+   },
+   "fac_c1": {
+    "3": 1,
+    "5": 1
+   }
+  },
+  {
+   "a": 9,
+   "b": 12,
+   "A": 763,
+   "B": 1980,
+   "c": 44,
+   "residue": 852,
+   "sum": "71/165",
+   "T_b": 0,
+   "Q_T": [],
+   "a_lt_b_over_2": false,
+   "fac_c": {
+    "2": 2,
+    "11": 1
+   },
+   "fac_c1": {
+    "3": 2,
+    "5": 1
+   }
+  },
+  {
+   "a": 154,
+   "b": 156,
+   "A": 36037,
+   "B": 1861860,
+   "c": 1364,
+   "residue": 38766,
+   "sum": "71/3410",
+   "T_b": 1,
+   "Q_T": [],
+   "a_lt_b_over_2": false,
+   "fac_c": {
+    "2": 2,
+    "11": 1,
+    "31": 1
+   },
+   "fac_c1": {
+    "3": 1,
+    "5": 1,
+    "7": 1,
+    "13": 1
+   }
+  }
+ ],
+ "legendre_own_synthetic": {
+  "W_mod_p": {
+   "-1": 68,
+   "0": 0,
+   "1": 53
+  },
+  "P_mod_q_small": {
+   "-1": 4,
+   "0": 0,
+   "1": 7
+  }
+ },
+ "prover2_reported_legendre": {
+  "W_mod_p": {
+   "-1": 68,
+   "0": 0,
+   "1": 53
+  },
+  "note": "from prover2_results.json part4; total 121 = 10+17+34+60 primes, consistent"
+ },
+ "all_pass": true,
+ "failures": []
+}

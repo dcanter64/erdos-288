@@ -1,0 +1,25 @@
+=== P2-1: 2-adic unique maximum, window b/2<a, 3a<=2b+2, 32<=b<=3000 ===
+window intervals: 751899 (P2: 751899); case a<=2^t: 635421 (P2: 635421); case a>2^t: 116478 (P2: 116478); failures (tie or s<t-1): 0 []
+
+=== P2-1 spot: v2(B) == s exactly, exact Fractions (window, b<=300 all + sample) ===
+spot intervals: 15699, v2(B)!=s or B<16: 0
+
+=== P2-1 analytic bound: Riemann sum and combination, exact ===
+(1/4)(1+4/5+2/3+4/7) = 319/420 ; claimed 319/420 = 319/420 ; equal: True
+319/420 + 1/17 + 1/16 = 25157/28560 ; claimed 25157/28560 ; equal: True ; <1: True
+window b<=400 exact: H <= 319/420 + 1/a violations: 0; max H seen: 0.708069
+
+=== P2-2: Lemma S chain: H < R/a, B > a/R, (A+1)/B < 2R/a, A+1<B if a>2R ===
+intervals (2<=R<=40, a<=3000): 117000, chain failures: 0
+R=1: (A+1)/B = 2/a integer iff a in [1, 2] (expect [1, 2])
+
+=== P2-3: Theorem F family, primes P = 1 mod 4, P <= 2000 ===
+primes P=1 mod 4, P<=2000: 147 (P2: 147)
+Traceback (most recent call last):
+  File "/home/hatch/workspace/math-hunt/erdos-288/clusters/E/redteam_p2.py", line 144, in <module>
+    A, B, L, P1, res, badp = sieve_data(a, b)
+                             ^^^^^^^^^^^^^^^^
+  File "/home/hatch/workspace/math-hunt/erdos-288/clusters/E/redteam_p2.py", line 118, in sieve_data
+    p = SPF[m]
+        ~~~^^^
+IndexError: list index out of range

@@ -1,0 +1,231 @@
+{
+  "P0_naive_N60_ordered_intersecting_integer_pairs": [
+    [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    [
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        2
+      ]
+    ],
+    [
+      [
+        2,
+        2
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    [
+      [
+        2,
+        2
+      ],
+      [
+        2,
+        2
+      ]
+    ]
+  ],
+  "P0_unexpected": [],
+  "P1_union_inside_1_2_table": [
+    {
+      "I": [
+        1,
+        1
+      ],
+      "J": [
+        1,
+        1
+      ],
+      "sum": "2",
+      "integer": true
+    },
+    {
+      "I": [
+        1,
+        1
+      ],
+      "J": [
+        1,
+        2
+      ],
+      "sum": "5/2",
+      "integer": false
+    },
+    {
+      "I": [
+        2,
+        2
+      ],
+      "J": [
+        2,
+        2
+      ],
+      "sum": "1",
+      "integer": true
+    },
+    {
+      "I": [
+        2,
+        2
+      ],
+      "J": [
+        1,
+        2
+      ],
+      "sum": "2",
+      "integer": true
+    },
+    {
+      "I": [
+        1,
+        2
+      ],
+      "J": [
+        1,
+        1
+      ],
+      "sum": "5/2",
+      "integer": false
+    },
+    {
+      "I": [
+        1,
+        2
+      ],
+      "J": [
+        2,
+        2
+      ],
+      "sum": "2",
+      "integer": true
+    },
+    {
+      "I": [
+        1,
+        2
+      ],
+      "J": [
+        1,
+        2
+      ],
+      "sum": "3",
+      "integer": true
+    }
+  ],
+  "P2_union_exactly_1_3": {
+    "pairs_tested": 13,
+    "integer_pairs": []
+  },
+  "P2_union_exactly_2_3": {
+    "pairs_tested": 5,
+    "integer_pairs": []
+  },
+  "P2_union_exactly_1_4": {
+    "pairs_tested": 25,
+    "integer_pairs": []
+  },
+  "P2_union_exactly_2_4": {
+    "pairs_tested": 13,
+    "integer_pairs": []
+  },
+  "P2_union_exactly_3_4": {
+    "pairs_tested": 5,
+    "integer_pairs": []
+  },
+  "P3_lemma31_predicate_failures_r_lt_s_le_2000": [],
+  "P3_hard_cases_scanned_directly": 6963,
+  "P4_shape_classification_N60_ordered": {
+    "equal": {
+      "pairs": 1830,
+      "integer_pairs": [
+        [
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        [
+          [
+            2,
+            2
+          ],
+          [
+            2,
+            2
+          ]
+        ]
+      ]
+    },
+    "containment": {
+      "pairs": 1187670,
+      "integer_pairs": [
+        [
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            2
+          ]
+        ],
+        [
+          [
+            2,
+            2
+          ],
+          [
+            1,
+            2
+          ]
+        ]
+      ]
+    },
+    "partial_overlap": {
+      "pairs": 1043710,
+      "integer_pairs": []
+    }
+  },
+  "P5_unions_checked": 3159,
+  "P5_valuation_or_integer_violations": []
+}

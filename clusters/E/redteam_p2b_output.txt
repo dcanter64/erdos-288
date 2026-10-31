@@ -1,0 +1,12 @@
+
+=== P2-3: Theorem F family, primes P = 1 mod 4, P <= 2000 ===
+primes P=1 mod 4, P<=2000: 147 (P2: 147)
+family failures: 0 []; distinct intervals: 147
+brute-force P1 cross-check P<=200: mismatches: 0
+
+=== P2 map of the 83: in-class intervals b<=300, own recompute ===
+in-class total: 83 (P2: 83); solutions among them: [(1, 3), (2, 3), (3, 6)] (P2: [(1,3),(2,3),(3,6)])
+nonsol R distribution: [(2, 74), (3, 3), (4, 1), (5, 1), (6, 1)] (P2: R2:74,R3:3,R4:1,R5:1,R6:1)
+nonsol in regime (ii): 78 of 80 (P2: 78 of 80)
+structural failures among 83: 0 (P2: 0)
+least-witness classes: {'p=2': 37, 'odd p, p^2<=b': 43} (P2: p=2: 37, odd p^2<=b: 43, sieve: 0)

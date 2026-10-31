@@ -1,0 +1,7 @@
+b=10007: primes in (b/4,b/2): 303, strip a tested: 300
+b=100000: primes in (b/4,b/2): 2371, strip a tested: 300
+b=999983: primes in (b/4,b/2): 19494, strip a tested: 300
+b=1000000: primes in (b/4,b/2): 19494, strip a tested: 300
+b=1234567: primes in (b/4,b/2): 23719, strip a tested: 300
+b=10000000: primes in (b/4,b/2): 165441, strip a tested: 300
+large-b sample: 1800 strip intervals, intervals with no valid prime: 0, invalid (prime,interval) pairs seen: 0

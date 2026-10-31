@@ -1,0 +1,4 @@
+b<=33, a>b/2 solutions (Fraction, general): [(1, 1, 1), (2, 2, 2), (2, 3, 6)]
+searched b=34..5000: 6252211 intervals with a>b/2
+candidates found: []
+RESULT: NO new solutions

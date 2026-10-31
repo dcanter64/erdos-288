@@ -1,0 +1,167 @@
+{
+  "check1": {
+    "pairs": [
+      {
+        "I": [
+          1,
+          1
+        ],
+        "J": [
+          1,
+          1
+        ],
+        "sum": "2",
+        "is_integer": true
+      },
+      {
+        "I": [
+          1,
+          2
+        ],
+        "J": [
+          1,
+          2
+        ],
+        "sum": "3",
+        "is_integer": true
+      },
+      {
+        "I": [
+          1,
+          2
+        ],
+        "J": [
+          2,
+          2
+        ],
+        "sum": "2",
+        "is_integer": true
+      },
+      {
+        "I": [
+          2,
+          2
+        ],
+        "J": [
+          2,
+          2
+        ],
+        "sum": "1",
+        "is_integer": true
+      }
+    ],
+    "all_integer": true,
+    "near_miss_11_12": "5/2",
+    "near_miss_is_5_2": true
+  },
+  "check2": {
+    "bound": 60,
+    "intersecting_unordered_pairs_tested": 1117520,
+    "integer_sum_pairs": [
+      [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      [
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      [
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      [
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          2
+        ]
+      ]
+    ],
+    "exactly_the_four": true
+  },
+  "check3": {
+    "r_lt_s_le_500_tested": 124750,
+    "failures": [
+      [
+        1,
+        2
+      ]
+    ],
+    "num_failures": 1
+  },
+  "check4": {
+    "cases_run": 486,
+    "overlap_mu2_cases": 322,
+    "all_ok": true,
+    "example_overlap": {
+      "I": [
+        2,
+        11
+      ],
+      "J": [
+        7,
+        8
+      ],
+      "union": [
+        2,
+        11
+      ],
+      "p": 7,
+      "n0": 7,
+      "e": 1,
+      "mu_n0": 2,
+      "val_n0": -1,
+      "unique_min": true,
+      "others_nonneg": true,
+      "vp_total_exact": -1,
+      "vp_total_eq_minus_e": true,
+      "total_is_integer": false
+    },
+    "example_plain": {
+      "I": [
+        2,
+        11
+      ],
+      "J": [
+        7,
+        8
+      ],
+      "union": [
+        2,
+        11
+      ],
+      "p": 7,
+      "n0": 7,
+      "e": 1,
+      "mu_n0": 2,
+      "val_n0": -1,
+      "unique_min": true,
+      "others_nonneg": true,
+      "vp_total_exact": -1,
+      "vp_total_eq_minus_e": true,
+      "total_is_integer": false
+    }
+  }
+}

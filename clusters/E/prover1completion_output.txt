@@ -1,0 +1,7 @@
+(1) ln2 < 2458234657/3546482940 = 0.6931471823180404 < 111/160; 1/18 + 111/160 = 1079/1440 < 3/4  OK
+(2) strip H<3/4: 333898 intervals, 34<=b<=2000, 0 violations; max H = 0.707229 at (a,b)=(18, 35)  OK
+(3) prime step: 17276937 (interval, prime) pairs, 34<=b<=2000, 0 with k(l)=0; T_l counts {'1/2': 11334720, '1/3': 2964151, '5/6': 2978066}; smallest l seen = 11  OK
+(4) subregime A: 666813 intervals, 34<=b<=2000, 2R<=a and exact H<1/2 throughout, 0 violations  OK
+(5) boundary: partition exact for all a>b/2, 34<=b<=2000; 3a=2b+1 (strip) instances: 656; 3a=2b+2 (subregime A) instances: 656  OK
+(6) filtering six by strict a>b/2: kept [(1, 1, 1), (2, 2, 2), (2, 3, 6)] ; excluded with a=b/2 exactly: [(1, 2, 2), (3, 6, 20)] ; also excluded (a<b/2): (1,3,6)  OK
+ALL PROVER1COMPLETION CHECKS PASSED

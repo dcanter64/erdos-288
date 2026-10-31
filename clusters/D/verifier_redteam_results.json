@@ -1,0 +1,159 @@
+{
+ "checks": [
+  {
+   "name": "R1 own enumeration b=30,40,50: (N,directed,F2,F3) match checkpoints",
+   "pass": true,
+   "detail": "{30: {'N': 5, 'directed': 32, 'F2': 30, 'F3': 1, 'best_max_u': 44}, 40: {'N': 6, 'directed': 64, 'F2': 62, 'F3': 0, 'best_max_u': 394}, 50: {'N': 8, 'directed': 256, 'F2': 239, 'F3': 0, 'best_max_u': 4007}}"
+  },
+  {
+   "name": "R1 own enumeration best max(u): b=30 -> 44 (u1 of the F3 survivor)",
+   "pass": true,
+   "detail": "44"
+  },
+  {
+   "name": "R1 b=30 candidate: Bezout, c=19227, F3 (trial division), F4 (Lambda_30 mod) all exact",
+   "pass": true,
+   "detail": "c=19227 c(c+1)=369696756"
+  },
+  {
+   "name": "R1 b=30 candidate fails F5 for every a in [1,30] (exact sums, both orders)",
+   "pass": true,
+   "detail": "[]"
+  },
+  {
+   "name": "R1 totals over 17 checkpoint files: 165,522,272 directed / 163,555,002 F1 / 64,899,301 F2 / F3=1 / F4=1 / F5=0",
+   "pass": true,
+   "detail": "{'directed': 165522272, 'f1': 163555002, 'f2': 64899301, 'f3': 1, 'f4': 1, 'f5': 0}"
+  },
+  {
+   "name": "R1 every checkpoint records min_is_global = true",
+   "pass": true,
+   "detail": "rows=17"
+  },
+  {
+   "name": "R1 defect b=100: F2=533, D_min=20.42 (2dp), zero survivors with D<=10",
+   "pass": true,
+   "detail": "{'f2': 533, 'dmin': 20.424659307988424, 'buckets': {1: 0, 2: 0, 5: 0, 10: 0}}"
+  },
+  {
+   "name": "R2 MITM N by own trial-division primes matches corrected table for all six rows",
+   "pass": true,
+   "detail": "{'250,0.25': {'N': 36, 'pi_b': 53, 'pi_floor_zb': 17}, '300,0.25': {'N': 43, 'pi_b': 62, 'pi_floor_zb': 19}, '200,0.25': {'N': 31, 'pi_b': 46, 'pi_floor_zb': 15}, '250,0.5': {'N': 29, 'pi_b': 53, 'pi_floor_zb': 24}, '300,0.5': {'N': 35, 'pi_b': 62, 'pi_floor_zb': 27}, '400,0.5': {'N': 46, 'pi_b': 78, 'pi_floor_zb': 32}}"
+  },
+  {
+   "name": "R2 pi differences as printed: pi(250)-pi(60)=53-17=36; pi(300)-pi(70)=62-19=43",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "R2 MITM F1 count own implementation (200,0.25) = 2089250414",
+   "pass": true,
+   "detail": "{'b': 200, 'eps': 0.25, 'zb': 50.33044421806796, 'N': 31, 'directed_total': 2147483648, 'f1_directed': 2089250414, 'pi_b': 46}"
+  },
+  {
+   "name": "R2 MITM F1 count own implementation (250,0.5) = 536807982",
+   "pass": true,
+   "detail": "{'b': 250, 'eps': 0.5, 'zb': 90.55574374935283, 'N': 29, 'directed_total': 536870912, 'f1_directed': 536807982, 'pi_b': 53}"
+  }
+ ],
+ "own_enum": {
+  "30": {
+   "N": 5,
+   "directed": 32,
+   "F2": 30,
+   "F3": 1,
+   "best_max_u": 44
+  },
+  "40": {
+   "N": 6,
+   "directed": 64,
+   "F2": 62,
+   "F3": 0,
+   "best_max_u": 394
+  },
+  "50": {
+   "N": 8,
+   "directed": 256,
+   "F2": 239,
+   "F3": 0,
+   "best_max_u": 4007
+  }
+ },
+ "b30": {
+  "P0": 6409,
+  "P1": 437,
+  "u0": 3,
+  "u1": 44,
+  "c": 19227
+ },
+ "totals": {
+  "directed": 165522272,
+  "f1": 163555002,
+  "f2": 64899301,
+  "f3": 1,
+  "f4": 1,
+  "f5": 0
+ },
+ "defect100": {
+  "f2": 533,
+  "dmin": 20.424659307988424,
+  "buckets": {
+   "1": 0,
+   "2": 0,
+   "5": 0,
+   "10": 0
+  }
+ },
+ "mitm": {
+  "250,0.25": {
+   "N": 36,
+   "pi_b": 53,
+   "pi_floor_zb": 17
+  },
+  "300,0.25": {
+   "N": 43,
+   "pi_b": 62,
+   "pi_floor_zb": 19
+  },
+  "200,0.25": {
+   "N": 31,
+   "pi_b": 46,
+   "pi_floor_zb": 15
+  },
+  "250,0.5": {
+   "N": 29,
+   "pi_b": 53,
+   "pi_floor_zb": 24
+  },
+  "300,0.5": {
+   "N": 35,
+   "pi_b": 62,
+   "pi_floor_zb": 27
+  },
+  "400,0.5": {
+   "N": 46,
+   "pi_b": 78,
+   "pi_floor_zb": 32
+  },
+  "full 200,0.25": {
+   "b": 200,
+   "eps": 0.25,
+   "zb": 50.33044421806796,
+   "N": 31,
+   "directed_total": 2147483648,
+   "f1_directed": 2089250414,
+   "pi_b": 46
+  },
+  "full 250,0.5": {
+   "b": 250,
+   "eps": 0.5,
+   "zb": 90.55574374935283,
+   "N": 29,
+   "directed_total": 536870912,
+   "f1_directed": 536807982,
+   "pi_b": 53
+  }
+ },
+ "all_pass": true,
+ "failures": []
+}

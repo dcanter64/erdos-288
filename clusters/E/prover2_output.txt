@@ -1,0 +1,25 @@
+=== Part 1: in-class intervals, b<=300 (independent recompute) ===
+in-class total: 83  solutions: [(1, 3, 6), (2, 3, 6), (3, 6, 20)]
+non-solutions: 80
+R distribution (nonsol): [(2, 74), (3, 3), (4, 1), (5, 1), (6, 1)]
+regime (ii) a>b/2: nonsol 78 of 80 ; all in-class: 79 of 83
+R=2 nonsol: 74
+structural failures (v_p good/bad, B|L) among the 83: 0
+least-witness class (80 nonsol): {'p=2': 37, 'odd p, p^2<=b': 43}  -- never a good or bad sieve prime (asserted)
+=== Part 2: R=2 characterization, a<=3000 ===
+characterization mismatches: 0
+=== Part 3: family from primes P = 1 (mod 4), P<=2000 ===
+primes checked: 147  failures: []
+distinct intervals: 147  max fibre: 1
+=== Part 4: regime (ii) mechanics ===
+H<1 for a>b/2, a>1, b<=300: checked 22649 failures 0
+2-adic unique maximum, dangerous window, 32<=b<=3000: checked 751899 case1 635421 case2 116478 failures 0
+solutions with b<32 (exact): [(1, 1, 1), (1, 2, 2), (2, 2, 2), (1, 3, 6), (2, 3, 6), (3, 6, 20)]
+  of which regime (ii) a>b/2: [(1, 1, 1), (2, 2, 2), (2, 3, 6)]
+=== Part 5: fixed R=3,4,5 in-class non-solutions, R^2<=a<=5000 ===
+R=3: in-class=37 solutions=0 examples=[(25, 27, 17550), (243, 245, 14526540), (273, 275, 20570550), (361, 363, 47437566), (625, 627, 245313750)]
+R=4: in-class=21 solutions=0 examples=[(286, 289, 3415924512), (361, 364, 8633637012), (1012, 1015, 527550403380), (1102, 1105, 741410039760), (1922, 1925, 6844448711100)]
+R=5: in-class=1 solutions=0 examples=[(2871, 2875, 32623204348449000)]
+=== Part 6: size-argument sanity (A+1<B for a>2R) ===
+failures: 0
+ALL CHECKS DONE

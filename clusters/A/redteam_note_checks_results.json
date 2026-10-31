@@ -1,0 +1,307 @@
+{
+  "C1_lemma24_failures_c_le_d_le_300": [],
+  "C2_theorem141_failures_c_le_2000": [],
+  "C3_theorem51_on_known_disjoint": [
+    {
+      "pair": [
+        [
+          1,
+          3
+        ],
+        [
+          6,
+          6
+        ]
+      ],
+      "p": 2,
+      "Q": 2,
+      "Rp_mod_p": 1,
+      "upper_multiples_of_Q": [
+        6
+      ],
+      "case": "ii",
+      "statement_holds": true,
+      "tp_congruence_holds": true
+    },
+    {
+      "pair": [
+        [
+          1,
+          3
+        ],
+        [
+          6,
+          6
+        ]
+      ],
+      "p": 3,
+      "Q": 3,
+      "Rp_mod_p": 1,
+      "upper_multiples_of_Q": [
+        6
+      ],
+      "case": "ii",
+      "statement_holds": true,
+      "tp_congruence_holds": true
+    },
+    {
+      "pair": [
+        [
+          2,
+          3
+        ],
+        [
+          6,
+          6
+        ]
+      ],
+      "p": 2,
+      "Q": 2,
+      "Rp_mod_p": 1,
+      "upper_multiples_of_Q": [
+        6
+      ],
+      "case": "ii",
+      "statement_holds": true,
+      "tp_congruence_holds": true
+    },
+    {
+      "pair": [
+        [
+          2,
+          3
+        ],
+        [
+          6,
+          6
+        ]
+      ],
+      "p": 3,
+      "Q": 3,
+      "Rp_mod_p": 1,
+      "upper_multiples_of_Q": [
+        6
+      ],
+      "case": "ii",
+      "statement_holds": true,
+      "tp_congruence_holds": true
+    },
+    {
+      "pair": [
+        [
+          3,
+          6
+        ],
+        [
+          20,
+          20
+        ]
+      ],
+      "p": 2,
+      "Q": 4,
+      "Rp_mod_p": 1,
+      "upper_multiples_of_Q": [
+        20
+      ],
+      "case": "ii",
+      "statement_holds": true,
+      "tp_congruence_holds": true
+    },
+    {
+      "pair": [
+        [
+          3,
+          6
+        ],
+        [
+          20,
+          20
+        ]
+      ],
+      "p": 3,
+      "Q": 3,
+      "Rp_mod_p": 0,
+      "upper_multiples_of_Q": [],
+      "case": "i",
+      "statement_holds": true,
+      "tp_congruence_holds": null
+    },
+    {
+      "pair": [
+        [
+          3,
+          6
+        ],
+        [
+          20,
+          20
+        ]
+      ],
+      "p": 5,
+      "Q": 5,
+      "Rp_mod_p": 1,
+      "upper_multiples_of_Q": [
+        20
+      ],
+      "case": "ii",
+      "statement_holds": true,
+      "tp_congruence_holds": true
+    }
+  ],
+  "C4_checks_on_known_disjoint": [
+    {
+      "pair": [
+        [
+          1,
+          3
+        ],
+        [
+          6,
+          6
+        ]
+      ],
+      "all_upper_divide_lambda_b": true,
+      "binom_divides_lambda_b": true,
+      "den_upper": 6,
+      "den_bound_rhs": "6",
+      "den_bound_holds": true,
+      "L_lt_b": true
+    },
+    {
+      "pair": [
+        [
+          2,
+          3
+        ],
+        [
+          6,
+          6
+        ]
+      ],
+      "all_upper_divide_lambda_b": true,
+      "binom_divides_lambda_b": true,
+      "den_upper": 6,
+      "den_bound_rhs": "6",
+      "den_bound_holds": true,
+      "L_lt_b": true
+    },
+    {
+      "pair": [
+        [
+          3,
+          6
+        ],
+        [
+          20,
+          20
+        ]
+      ],
+      "all_upper_divide_lambda_b": true,
+      "binom_divides_lambda_b": true,
+      "den_upper": 20,
+      "den_bound_rhs": "20",
+      "den_bound_holds": true,
+      "L_lt_b": true
+    }
+  ],
+  "C5_lemma132_b200000": {
+    "z": 16385.28671818444,
+    "logB": 16763.061623405385,
+    "logB_over_z": 1.0230557396839255,
+    "theta_identity_sum": 16763.0616234054,
+    "identity_abs_diff": 1.4551915228366852e-11
+  },
+  "C6_seven_examples": [
+    {
+      "pair": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "sum": "2"
+    },
+    {
+      "pair": [
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "sum": "3"
+    },
+    {
+      "pair": [
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "sum": "2"
+    },
+    {
+      "pair": [
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "sum": "1"
+    },
+    {
+      "pair": [
+        [
+          1,
+          3
+        ],
+        [
+          6,
+          6
+        ]
+      ],
+      "sum": "2"
+    },
+    {
+      "pair": [
+        [
+          2,
+          3
+        ],
+        [
+          6,
+          6
+        ]
+      ],
+      "sum": "1"
+    },
+    {
+      "pair": [
+        [
+          3,
+          6
+        ],
+        [
+          20,
+          20
+        ]
+      ],
+      "sum": "1"
+    }
+  ]
+}

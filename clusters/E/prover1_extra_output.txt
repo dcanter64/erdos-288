@@ -1,0 +1,15 @@
+strip intervals (b/2<a, 3a<=2b+1, b<=200) with r0<=L:
+  (a,b)=(6,10) r0=140 smooth=True B_in_class=False
+  (a,b)=(7,10) r0=140 smooth=True B_in_class=False
+  (a,b)=(8,12) r0=715 smooth=False B_in_class=False
+  (a,b)=(8,13) r0=40040 smooth=True B_in_class=False
+  (a,b)=(8,15) r0=326326 smooth=False B_in_class=False
+  (a,b)=(9,16) r0=326326 smooth=False B_in_class=False
+  (a,b)=(15,28) r0=45945445403 smooth=False B_in_class=False
+  (a,b)=(16,28) r0=45945445403 smooth=False B_in_class=False
+  (a,b)=(20,33) r0=275610266932 smooth=False B_in_class=False
+  (a,b)=(21,33) r0=275610266932 smooth=False B_in_class=False
+
+regime (ii) finite check, b<=33, a>b/2: exact solution test via Lemma 1 candidate
+H(a,b)=A/B lowest terms; solution iff (A+1) % B == 0 (then m=B).
+solutions with a>b/2, b<=33: [(1, 1, 1), (2, 2, 2), (2, 3, 6)]

@@ -1,0 +1,37 @@
+=== (c1) ln 2 < 111/160, self-contained exact check ===
+2*partial+tailbound = 2458234657/3546482940 = 0.69314718; 111/160 = 0.69375000
+ln2 < 111/160: True
+
+=== (c2) strip H < 3/4 chain, exact endpoint arithmetic ===
+1/18 + 111/160 = 1079/1440 = 0.749306 < 3/4: True  (margin 0.000694)
+strip b<=300 exact: violations of H<3/4: 0; max H = 0.707229 at (18, 35)
+  strip length 1: NO strip intervals with b in [34,2000] (length L in strip needs 3(b-L+1)<=2b+1, i.e. b<=3L-2; for b>=34 strip length is >= (b+2)/3 >= 12)
+  strip length 2: NO strip intervals with b in [34,2000] (length L in strip needs 3(b-L+1)<=2b+1, i.e. b<=3L-2; for b>=34 strip length is >= (b+2)/3 >= 12)
+  strip length 3: NO strip intervals with b in [34,2000] (length L in strip needs 3(b-L+1)<=2b+1, i.e. b<=3L-2; for b>=34 strip length is >= (b+2)/3 >= 12)
+  minimum strip interval length for 34<=b<=2000: 12
+
+=== (c3) subregime A (3a >= 2b+2): R <= a/2 and H < 1/2, endpoints ===
+grid b<5000: violations of 2R<=a in subregime A: 0
+R=1 in subregime A (b>=34): a=b>=34, H=1/a<=1/34<1/2 OK; note H=R/a exactly,
+so the bare claim 'H < R/a' FAILS at R=1 (equality); at a=b=2, H=1/2 exactly
+and (2,2,2) IS a solution -- outside b>=34 range, so harmless there.
+
+=== (d) m-forcing from 0 < H < 3/4 (pure enumeration) ===
+grid check (H=k/1000<3/4, m<50): solutions with m not in {2,3}: 0
+
+=== (e) Claim 2 boundary a = 2R ===
+  R=1 a=2R=2 b=2: H=0.500000 <1/2: False  bound 1/a+(R-1)/(a+1)=0.500000 < R/a=0.5000: False
+  R=2 a=2R=4 b=5: H=0.450000 <1/2: True  bound 1/a+(R-1)/(a+1)=0.450000 < R/a=0.5000: True
+  R=3 a=2R=6 b=8: H=0.434524 <1/2: True  bound 1/a+(R-1)/(a+1)=0.452381 < R/a=0.5000: True
+  R=4 a=2R=8 b=11: H=0.427020 <1/2: True  bound 1/a+(R-1)/(a+1)=0.458333 < R/a=0.5000: True
+  R=5 a=2R=10 b=14: H=0.422594 <1/2: True  bound 1/a+(R-1)/(a+1)=0.463636 < R/a=0.5000: True
+  R=10 a=2R=20 b=29: H=0.413914 <1/2: True  bound 1/a+(R-1)/(a+1)=0.478571 < R/a=0.5000: True
+  R=50 a=2R=100 b=149: H=0.407136 <1/2: True  bound 1/a+(R-1)/(a+1)=0.495149 < R/a=0.5000: True
+  R=100 a=2R=200 b=299: H=0.406300 <1/2: True  bound 1/a+(R-1)/(a+1)=0.497537 < R/a=0.5000: True
+  R=1,a=2: H=1/2 exactly, (2,2,2) solution -> a>2R is SHARP at R=1;
+  for R>=2 the same proof gives a>=2R too (claim true as stated, not sharp).
+
+=== (f) census b<=300 filter a>b/2 (recompute, compare AUDIT-B list) ===
+all solutions b<=300: [(1, 1, 1), (1, 2, 2), (2, 2, 2), (1, 3, 6), (2, 3, 6), (3, 6, 20)]
+filtered a>b/2: [(1, 1, 1), (2, 2, 2), (2, 3, 6)]
+boundary: (1,2,2): 2a=b -> excluded by strict >; (3,6,20): 2a=b -> excluded.

@@ -1,0 +1,12 @@
+b=60 eps=0.25 N=9 states=256 eval=256 F1=512 F2=450 F3=0 F4=0 F5=0 best_log_max_u=12.579654852770611 logBb=24.61 elapsed=0.0s
+b=70 eps=0.25 N=11 states=1024 eval=1024 F1=2048 F2=1222 F3=0 F4=0 F5=0 best_log_max_u=13.630084186216841 logBb=25.31 elapsed=0.0s
+b=80 eps=0.25 N=13 states=4096 eval=4096 F1=8192 F2=3556 F3=0 F4=0 F5=0 best_log_max_u=19.704873958008047 logBb=28.44 elapsed=0.2s
+b=90 eps=0.25 N=15 states=16384 eval=16384 F1=32768 F2=1483 F3=0 F4=0 F5=0 best_log_max_u=22.140951468370474 logBb=29.54 elapsed=0.1s
+b=100 eps=0.25 N=16 states=32768 eval=32768 F1=65536 F2=533 F3=0 F4=0 F5=0 best_log_max_u=23.658456398615595 logBb=29.54 elapsed=0.3s
+b=110 eps=0.25 N=18 states=131072 eval=131072 F1=262144 F2=4950 F3=0 F4=0 F5=0 best_log_max_u=27.3201099203153 logBb=36.34 elapsed=1.1s
+b=120 eps=0.25 N=19 states=262144 eval=262144 F1=524288 F2=465 F3=0 F4=0 F5=0 best_log_max_u=30.410444319622393 logBb=36.34 elapsed=8.6s
+b=130 eps=0.25 N=20 states=524288 eval=524288 F1=1048576 F2=16636 F3=0 F4=0 F5=0 best_log_max_u=32.428081174735716 logBb=41.04 elapsed=7.4s
+b=140 eps=0.25 N=22 states=2097152 eval=2049229 F1=4098458 F2=8847 F3=0 F4=0 F5=0 best_log_max_u=35.40969946990601 logBb=44.65 elapsed=24.2s
+b=150 eps=0.25 N=23 states=4194304 eval=4051223 F1=8102446 F2=763 F3=0 F4=0 F5=0 best_log_max_u=39.00561886453519 logBb=44.65 elapsed=40.2s
+b=160 eps=0.25 N=24 states=8388608 eval=8196247 F1=16392494 F2=4505 F3=0 F4=0 F5=0 best_log_max_u=38.80685511552189 logBb=48.37 elapsed=121.1s
+b=175 eps=0.25 N=26 states=33554432 eval=32961475 F1=65922950 F2=29009 F3=0 F4=0 F5=0 best_log_max_u=45.22014345449882 logBb=54.69 elapsed=614.6s
