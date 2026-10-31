@@ -1,0 +1,136 @@
+{
+ "method": "verifier descending exact-fraction sweep, R1=2147483647, R2=4294967291 filters, exact decisions",
+ "ranges": [
+  {
+   "b_range": [
+    2001,
+    3000
+   ],
+   "intervals": 2500500,
+   "singletons": [],
+   "l2_solutions": [],
+   "nearmisses": [],
+   "pronic_c_le_b": 1010,
+   "singleton_filter_passes": 0,
+   "l2_screen_passes": 636453,
+   "seconds": 79.24
+  },
+  {
+   "b_range": [
+    10001,
+    10100
+   ],
+   "intervals": 1005050,
+   "singletons": [],
+   "l2_solutions": [],
+   "nearmisses": [],
+   "pronic_c_le_b": 101,
+   "singleton_filter_passes": 0,
+   "l2_screen_passes": 229740,
+   "seconds": 88.51
+  },
+  {
+   "b_range": [
+    14951,
+    15050
+   ],
+   "intervals": 1500050,
+   "singletons": [],
+   "l2_solutions": [],
+   "nearmisses": [],
+   "pronic_c_le_b": 101,
+   "singleton_filter_passes": 0,
+   "l2_screen_passes": 335744,
+   "seconds": 202.03
+  },
+  {
+   "b_range": [
+    19901,
+    20000
+   ],
+   "intervals": 1995050,
+   "singletons": [],
+   "l2_solutions": [],
+   "nearmisses": [],
+   "pronic_c_le_b": 100,
+   "singleton_filter_passes": 0,
+   "l2_screen_passes": 552964,
+   "seconds": 457.73
+  }
+ ],
+ "fraction_crosscheck_b<=40": "all intervals match Fraction",
+ "selftest_1_250": {
+  "b_range": [
+   1,
+   250
+  ],
+  "intervals": 31375,
+  "singletons": [
+   [
+    1,
+    1,
+    1
+   ],
+   [
+    2,
+    2,
+    2
+   ],
+   [
+    1,
+    2,
+    2
+   ],
+   [
+    2,
+    3,
+    6
+   ],
+   [
+    1,
+    3,
+    6
+   ],
+   [
+    3,
+    6,
+    20
+   ]
+  ],
+  "l2_solutions": [],
+  "nearmisses": [
+   [
+    5,
+    7,
+    210,
+    14,
+    136
+   ],
+   [
+    4,
+    7,
+    420,
+    20,
+    360
+   ],
+   [
+    9,
+    12,
+    1980,
+    44,
+    852
+   ],
+   [
+    154,
+    156,
+    1861860,
+    1364,
+    38766
+   ]
+  ],
+  "pronic_c_le_b": 270,
+  "singleton_filter_passes": 6,
+  "l2_screen_passes": 7220,
+  "seconds": 0.59
+ }
+}
