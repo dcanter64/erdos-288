@@ -24,7 +24,7 @@ Verification discipline, stated plainly: verifiers worked from statements and in
 
 ## AI disclosure
 
-Model: Meta Muse. Process: an agentic fan out in which a coordinator briefed independent auditor, prover, red team, and verifier agents, verifiers checked the work claim by claim, and further agents ran and recounted the computations; the coordinator then wrote the record only from the verifier certified files.
+Model: Meta Muse (Wonder). Process: an agentic fan out in which a coordinator briefed independent auditor, prover, red team, and verifier agents, verifiers checked the work claim by claim, and further agents ran and recounted the computations; the coordinator then wrote the record only from the verifier certified files.
 
 The two audited notes are themselves AI assisted work, and that is recorded where they are cited: Nayak's note states on its title page that it was written with assistance from GPT-5.5 Thinking, and Zeraoulia's note is an unreviewed preprint presenting a reduction, not a proof. Neither note had been refereed before this cycle; the audits in AUDIT-A.md and AUDIT-B.md are, to our knowledge, the first documented claim-by-claim independent audits of either. (An earlier check, reported on the problem forum without detail, had flagged one minor issue in Nayak's note before this cycle; see AUDIT-A.md.)
 
