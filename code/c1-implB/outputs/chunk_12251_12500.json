@@ -1,0 +1,1 @@
+{"b_lo":12251,"b_hi":12500,"moduli":[1000000007,1000000009,998244353],"singleton_candidates":[],"l2_nearmisses":[],"stats":{"intervals":3093875,"p1_passes":0,"singleton_candidates":0,"l2_prefilter_passes":3027199,"l2_legendre_passes":399372,"l2_legendreX_passes":7094,"l2_legendreD_passes":251,"l2_nearmisses":0,"l2_pronic_c_le_b":251},"seconds":78.152}

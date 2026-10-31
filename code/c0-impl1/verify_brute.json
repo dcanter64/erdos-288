@@ -1,0 +1,45 @@
+{
+ "bmax": 300,
+ "cmax": 20000,
+ "brute_singleton": [
+  {
+   "a": 1,
+   "b": 1,
+   "m": 1,
+   "disjoint": false
+  },
+  {
+   "a": 1,
+   "b": 2,
+   "m": 2,
+   "disjoint": false
+  },
+  {
+   "a": 2,
+   "b": 2,
+   "m": 2,
+   "disjoint": false
+  },
+  {
+   "a": 1,
+   "b": 3,
+   "m": 6,
+   "disjoint": true
+  },
+  {
+   "a": 2,
+   "b": 3,
+   "m": 6,
+   "disjoint": true
+  },
+  {
+   "a": 3,
+   "b": 6,
+   "m": 20,
+   "disjoint": true
+  }
+ ],
+ "brute_l2_c_le_cmax": [],
+ "matches_census_singleton": true,
+ "matches_census_l2_within_cmax": true
+}

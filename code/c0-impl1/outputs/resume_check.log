@@ -1,0 +1,147 @@
+Precomputing exact harmonic numbers H_n up to n = 2000 ...
+  done; H_2000 has a 2876-bit denominator.
+b    1.. 100: checkpoint hit, skipped; cumulative pairs 5050, singleton 6, L2 0
+b  101.. 200: checkpoint hit, skipped; cumulative pairs 20100, singleton 6, L2 0
+b  201.. 300: checkpoint hit, skipped; cumulative pairs 45150, singleton 6, L2 0
+b  301.. 400: checkpoint hit, skipped; cumulative pairs 80200, singleton 6, L2 0
+b  401.. 500: checkpoint hit, skipped; cumulative pairs 125250, singleton 6, L2 0
+b  501.. 600: checkpoint hit, skipped; cumulative pairs 180300, singleton 6, L2 0
+b  601.. 700: checkpoint hit, skipped; cumulative pairs 245350, singleton 6, L2 0
+b  701.. 800: checkpoint hit, skipped; cumulative pairs 320400, singleton 6, L2 0
+b  801.. 900: checkpoint hit, skipped; cumulative pairs 405450, singleton 6, L2 0
+b  901..1000: checkpoint hit, skipped; cumulative pairs 500500, singleton 6, L2 0
+b 1001..1100: checkpoint hit, skipped; cumulative pairs 605550, singleton 6, L2 0
+b 1101..1200: checkpoint hit, skipped; cumulative pairs 720600, singleton 6, L2 0
+b 1201..1300: checkpoint hit, skipped; cumulative pairs 845650, singleton 6, L2 0
+b 1301..1400: checkpoint hit, skipped; cumulative pairs 980700, singleton 6, L2 0
+b 1401..1500: checkpoint hit, skipped; cumulative pairs 1125750, singleton 6, L2 0
+b 1501..1600: checkpoint hit, skipped; cumulative pairs 1280800, singleton 6, L2 0
+b 1601..1700: checkpoint hit, skipped; cumulative pairs 1445850, singleton 6, L2 0
+b 1701..1800: checkpoint hit, skipped; cumulative pairs 1620900, singleton 6, L2 0
+b 1801..1900: checkpoint hit, skipped; cumulative pairs 1805950, singleton 6, L2 0
+b 1901..2000: checkpoint hit, skipped; cumulative pairs 2001000, singleton 6, L2 0
+{
+ "max_b": 2000,
+ "pairs_checked": 2001000,
+ "singleton_solutions_all": [
+  {
+   "a": 1,
+   "b": 1,
+   "disjoint": false,
+   "m": 1
+  },
+  {
+   "a": 1,
+   "b": 2,
+   "disjoint": false,
+   "m": 2
+  },
+  {
+   "a": 2,
+   "b": 2,
+   "disjoint": false,
+   "m": 2
+  },
+  {
+   "a": 1,
+   "b": 3,
+   "disjoint": true,
+   "m": 6
+  },
+  {
+   "a": 2,
+   "b": 3,
+   "disjoint": true,
+   "m": 6
+  },
+  {
+   "a": 3,
+   "b": 6,
+   "disjoint": true,
+   "m": 20
+  }
+ ],
+ "singleton_solutions_b_le_1600": [
+  {
+   "a": 1,
+   "b": 1,
+   "disjoint": false,
+   "m": 1
+  },
+  {
+   "a": 1,
+   "b": 2,
+   "disjoint": false,
+   "m": 2
+  },
+  {
+   "a": 2,
+   "b": 2,
+   "disjoint": false,
+   "m": 2
+  },
+  {
+   "a": 1,
+   "b": 3,
+   "disjoint": true,
+   "m": 6
+  },
+  {
+   "a": 2,
+   "b": 3,
+   "disjoint": true,
+   "m": 6
+  },
+  {
+   "a": 3,
+   "b": 6,
+   "disjoint": true,
+   "m": 20
+  }
+ ],
+ "singleton_disjoint_b_le_max": [
+  {
+   "a": 1,
+   "b": 3,
+   "disjoint": true,
+   "m": 6
+  },
+  {
+   "a": 2,
+   "b": 3,
+   "disjoint": true,
+   "m": 6
+  },
+  {
+   "a": 3,
+   "b": 6,
+   "disjoint": true,
+   "m": 20
+  }
+ ],
+ "singleton_nondisjoint_b_le_max": [
+  {
+   "a": 1,
+   "b": 1,
+   "disjoint": false,
+   "m": 1
+  },
+  {
+   "a": 1,
+   "b": 2,
+   "disjoint": false,
+   "m": 2
+  },
+  {
+   "a": 2,
+   "b": 2,
+   "disjoint": false,
+   "m": 2
+  }
+ ],
+ "l2_solutions": [],
+ "chunks_total": 20,
+ "chunks_skipped_from_checkpoint": 20,
+ "total_elapsed_seconds": 0.017
+}
+TOTAL elapsed 0.0s

@@ -1,0 +1,38 @@
+[
+ {
+  "a": 1,
+  "b": 1,
+  "disjoint": false,
+  "m": 1
+ },
+ {
+  "a": 1,
+  "b": 2,
+  "disjoint": false,
+  "m": 2
+ },
+ {
+  "a": 2,
+  "b": 2,
+  "disjoint": false,
+  "m": 2
+ },
+ {
+  "a": 1,
+  "b": 3,
+  "disjoint": true,
+  "m": 6
+ },
+ {
+  "a": 2,
+  "b": 3,
+  "disjoint": true,
+  "m": 6
+ },
+ {
+  "a": 3,
+  "b": 6,
+  "disjoint": true,
+  "m": 20
+ }
+]

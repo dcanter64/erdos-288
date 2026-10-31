@@ -1,0 +1,46 @@
+{
+ "b_hi": 100,
+ "b_lo": 1,
+ "complete": true,
+ "elapsed_seconds_this_run": 0.057,
+ "l2_solutions": [],
+ "pairs_checked": 5050,
+ "singleton_solutions": [
+  {
+   "a": 1,
+   "b": 1,
+   "disjoint": false,
+   "m": 1
+  },
+  {
+   "a": 1,
+   "b": 2,
+   "disjoint": false,
+   "m": 2
+  },
+  {
+   "a": 2,
+   "b": 2,
+   "disjoint": false,
+   "m": 2
+  },
+  {
+   "a": 1,
+   "b": 3,
+   "disjoint": true,
+   "m": 6
+  },
+  {
+   "a": 2,
+   "b": 3,
+   "disjoint": true,
+   "m": 6
+  },
+  {
+   "a": 3,
+   "b": 6,
+   "disjoint": true,
+   "m": 20
+  }
+ ]
+}

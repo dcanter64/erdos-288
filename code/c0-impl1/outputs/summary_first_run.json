@@ -1,0 +1,124 @@
+{
+ "max_b": 2000,
+ "pairs_checked": 2001000,
+ "singleton_solutions_all": [
+  {
+   "a": 1,
+   "b": 1,
+   "m": 1,
+   "disjoint": false
+  },
+  {
+   "a": 1,
+   "b": 2,
+   "m": 2,
+   "disjoint": false
+  },
+  {
+   "a": 2,
+   "b": 2,
+   "m": 2,
+   "disjoint": false
+  },
+  {
+   "a": 1,
+   "b": 3,
+   "m": 6,
+   "disjoint": true
+  },
+  {
+   "a": 2,
+   "b": 3,
+   "m": 6,
+   "disjoint": true
+  },
+  {
+   "a": 3,
+   "b": 6,
+   "m": 20,
+   "disjoint": true
+  }
+ ],
+ "singleton_solutions_b_le_1600": [
+  {
+   "a": 1,
+   "b": 1,
+   "m": 1,
+   "disjoint": false
+  },
+  {
+   "a": 1,
+   "b": 2,
+   "m": 2,
+   "disjoint": false
+  },
+  {
+   "a": 2,
+   "b": 2,
+   "m": 2,
+   "disjoint": false
+  },
+  {
+   "a": 1,
+   "b": 3,
+   "m": 6,
+   "disjoint": true
+  },
+  {
+   "a": 2,
+   "b": 3,
+   "m": 6,
+   "disjoint": true
+  },
+  {
+   "a": 3,
+   "b": 6,
+   "m": 20,
+   "disjoint": true
+  }
+ ],
+ "singleton_disjoint_b_le_max": [
+  {
+   "a": 1,
+   "b": 3,
+   "m": 6,
+   "disjoint": true
+  },
+  {
+   "a": 2,
+   "b": 3,
+   "m": 6,
+   "disjoint": true
+  },
+  {
+   "a": 3,
+   "b": 6,
+   "m": 20,
+   "disjoint": true
+  }
+ ],
+ "singleton_nondisjoint_b_le_max": [
+  {
+   "a": 1,
+   "b": 1,
+   "m": 1,
+   "disjoint": false
+  },
+  {
+   "a": 1,
+   "b": 2,
+   "m": 2,
+   "disjoint": false
+  },
+  {
+   "a": 2,
+   "b": 2,
+   "m": 2,
+   "disjoint": false
+  }
+ ],
+ "l2_solutions": [],
+ "chunks_total": 20,
+ "chunks_skipped_from_checkpoint": 0,
+ "total_elapsed_seconds": 185.64
+}
